@@ -15,5 +15,8 @@
 ```python
 import effectR
 p = effectR.ExecuteR(script = '/full/path/script.R')
-p = effectR.ExecuteR(script = '/full/path/script.R', rbin = '/home/debmalya/anaconda3/envs/R/bin/Rscript')
+p = effectR.ExecuteR(script = '/full/path/script.R', rbin = '/home/username/anaconda3/envs/R/bin/Rscript')
 ```
+
+<p align = "justify">If R is not installed in the default directory, then pass the `rbin` arguments. For instance, if R is installed via a <i>anaconda environment</i> then the path will be something like the one specified above.</p>
+<p align = "justify">You can add the <i>anaconda-path</i> to <code>~/.bashrc</code> so that R is available system wide.</p>
