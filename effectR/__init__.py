@@ -1,10 +1,9 @@
 # -*- encoding: utf-8 -*-
 
 __author__    = 'Debmalya Pramanik'
-__copyright__ = f"Copyright (c) [year] {__author__}"
+__copyright__ = f"Copyright (c) 2020 {__author__}"
 
-# __status__    = ""
-# __docformat__ = ""
+__status__    = "development"
 
 # Let's Check for the Dependencies
 # hardDependencies    = [] # remove/update from setup.py
