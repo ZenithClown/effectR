@@ -3,6 +3,8 @@
 import subprocess
 from platform import system, release
 
+from ..exceptions import *
+
 class OSOptions:
     '''Defines the OS-Options'''
     def __init__(self, rbin : str):
@@ -17,7 +19,7 @@ class OSOptions:
         
         if proc.returncode == 127:
             if rbin == None:
-                warnings.warn('/bin/sh: 1: R: not found')
+                warnings.warn('/bin/sh: 1: R: not found', DefaultPathWarning)
             return False
         
         return True
