@@ -18,7 +18,12 @@ __status__    = "development"
 # if missingDependencies:
 # 	raise ImportError('Required Dependencies {}'.format(missingDependencies))
 
-from .api import OSOptions
-option = OSOptions() # Create class object
+### --- Main Code --- ###
+import subprocess
 
-# init-time Option Registrations
+def ExecuteR(script : str, rbin : str = None):
+    '''Execute R Code'''
+    option = OSOptions(rbin = rbin)
+
+    if option.RAvailable:
+        subprocess.call (["/usr/bin/Rscript", "--vanilla", script])
