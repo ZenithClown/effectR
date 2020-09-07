@@ -8,6 +8,9 @@
 	<a href = "https://app.pluralsight.com/profile/Debmalya-Pramanik/"><img height="16" width="16" src="https://unpkg.com/simple-icons@v3/icons/pluralsight.svg"/></a>
 	<a href = "https://stackoverflow.com/users/6623589/"><img height="16" width="16" src="https://unpkg.com/simple-icons@v3/icons/stackoverflow.svg"/></a>
     <a href = "https://www.hackerrank.com/dPramanik"><img height="16" width="16" src="https://unpkg.com/simple-icons@v3/icons/hackerrank.svg"/></a>
+    <br>
+    <a href="https://github.com/ZenithClown/effectR/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ZenithClown/effectR?style=plastic"></a>
+    <a href="https://github.com/ZenithClown/effectR/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/ZenithClown/effectR?style=plastic"></a>
 </h1>
 
 <p align = "justify"><b>effectR</b> a simple implementation to run <i>R</i> codes from <i>python</i>. Module is implemented using <code>subprocess</code>. For simple execution, <a href = "https://stackoverflow.com/a/38096853">follow this link</a>.</p>
