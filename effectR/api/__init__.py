@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 
+import warnings
 import subprocess
 from platform import system, release
 
