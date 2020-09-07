@@ -7,16 +7,19 @@ __copyright__ = f"Copyright (c) [year] {__author__}"
 # __docformat__ = ""
 
 # Let's Check for the Dependencies
-hardDependencies    = ['numpy'] # remove/update from setup.py
-missingDependencies = []
+# hardDependencies    = [] # remove/update from setup.py
+# missingDependencies = []
 
-for dependency in hardDependencies:
-	try:
-		__import__(dependency)
-	except ImportError:
-		missingDependencies.append(dependency)
+# for dependency in hardDependencies:
+# 	try:
+# 		__import__(dependency)
+# 	except ImportError:
+# 		missingDependencies.append(dependency)
 
-if missingDependencies:
-	raise ImportError('Required Dependencies {}'.format(missingDependencies))
+# if missingDependencies:
+# 	raise ImportError('Required Dependencies {}'.format(missingDependencies))
+
+from .api import OSOptions
+option = OSOptions() # Create class object
 
 # init-time Option Registrations
