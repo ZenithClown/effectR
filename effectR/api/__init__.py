@@ -18,7 +18,7 @@ class OSOptions:
         proc = subprocess.run('R --version', shell = True)
         
         if proc.returncode == 127:
-            if rbin == None:
+            if self.rbin == None:
                 warnings.warn('/bin/sh: 1: R: not found', DefaultPathWarning)
             return False
         

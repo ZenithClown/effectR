@@ -11,3 +11,9 @@
 </h1>
 
 <p align = "justify"><b>effectR</b> a simple implementation to run <i>R</i> codes from <i>python</i>. Module is implemented using <code>subprocess</code>. For simple execution, <a href = "https://stackoverflow.com/a/38096853">follow this link</a>.</p>
+
+```python
+import effectR
+p = effectR.ExecuteR(script = '/full/path/script.R')
+p = effectR.ExecuteR(script = '/full/path/script.R', rbin = '/home/debmalya/anaconda3/envs/R/bin/Rscript')
+```
