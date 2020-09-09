@@ -17,6 +17,13 @@ class OSOptions:
     def RAvailable(self):
         '''Check if R is available'''
         proc = subprocess.run('R --version', shell = True)
+
+        # Check if anaconda is installed
+        if 'linux' in self.OSName:
+            conda_config = subprocess.run(['which', 'anaconda'], capture_output = True)
+            conda_config = conda_config.stdout.decode(encoding)
+            if conda_config:
+                warnings.warn('anaconda is installed')
         
         if proc.returncode == 127:
             if self.rbin == None:
