@@ -21,9 +21,19 @@ def ExecuteR(script : str, rbin : str = None, encoding = 'utf-8'):
         if (rbin == None) and ('linux' in option.OSName):
             _get_directory = subprocess.run(['which', 'R'], capture_output = True)
             rbin = _get_directory.stdout.decode(encoding)
+            print('RBIN:', rbin)
             warnings.warn(f'Using R from {rbin}', FoundR)
 
-        proc = subprocess.run([rbin, "--vanilla", script], capture_output = True)
+        try:
+            proc = subprocess.run([rbin, "--vanilla", script], capture_output = True)
+        except FileNotFoundError as err:
+            warnings.warn(f'Is R registered in $PATH? {err}', DefaultPathWarning)
+            _get_directory = subprocess.run(['which', 'R'], capture_output = True)
+            rbin = _get_directory.stdout.decode(encoding)
+
+            if rbin:
+                warnings.warn(f'Located R at {rbin}', FoundR)
+                proc = subprocess.run([rbin, "--vanilla", script], capture_output = True)
 
     _stdin  = ' '.join(proc.args)
     _stdout = proc.stdout.decode(encoding)
